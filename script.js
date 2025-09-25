@@ -253,29 +253,28 @@ class StickerDesigner {
 
     // Load sticker data
     loadStickers() {
-        // Sample sticker data - in a real app, this would come from an API
-        this.stickers = [
-            // Car stickers
-            { id: 1, name: 'Speed Demon', category: 'cars', image: 'stickers/car-sticker-1.svg', tags: ['speed', 'racing'] },
-            { id: 2, name: 'Classic Car', category: 'cars', image: 'stickers/car-sticker-2.svg', tags: ['vintage', 'classic'] },
-            { id: 3, name: 'Modern Sport', category: 'cars', image: 'stickers/car-sticker-3.svg', tags: ['sport', 'modern'] },
-            
-            // Bike stickers
-            { id: 4, name: 'Biker Gang', category: 'bikes', image: 'stickers/bike-sticker-1.svg', tags: ['motorcycle', 'gang'] },
-            { id: 5, name: 'Speed Bike', category: 'bikes', image: 'stickers/bike-sticker-2.svg', tags: ['speed', 'racing'] },
-            { id: 6, name: 'Vintage Bike', category: 'bikes', image: 'stickers/bike-sticker-3.svg', tags: ['vintage', 'classic'] },
-            
-            // Truck stickers
-            { id: 7, name: 'Big Rig', category: 'trucks', image: 'stickers/truck-sticker-1.svg', tags: ['truck', 'commercial'] },
-            { id: 8, name: 'Pickup Power', category: 'trucks', image: 'stickers/truck-sticker-2.svg', tags: ['pickup', 'power'] },
-            { id: 9, name: 'Monster Truck', category: 'trucks', image: 'stickers/truck-sticker-3.svg', tags: ['monster', 'extreme'] },
-            
-            // Custom stickers
-            { id: 10, name: 'Custom Design 1', category: 'custom', image: 'stickers/custom-sticker-1.svg', tags: ['custom', 'unique'] },
-            { id: 11, name: 'Custom Design 2', category: 'custom', image: 'stickers/custom-sticker-2.svg', tags: ['custom', 'artistic'] },
-            { id: 12, name: 'Custom Design 3', category: 'custom', image: 'stickers/custom-sticker-3.svg', tags: ['custom', 'creative'] }
-        ];
+  this.stickers = [
+    {
+      id: 1,
+      name: 'Test Car 1',
+      category: 'cars',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Red_car_top_view.svg'
+    },
+    {
+      id: 2,
+      name: 'Test Bike',
+      category: 'bikes',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Motorbike_icon.svg'
+    },
+    {
+      id: 3,
+      name: 'Lightning Bolt',
+      category: 'custom',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Lightning_bolt.svg'
     }
+  ];
+}
+
 
     // Load gallery on homepage
     loadGallery() {
@@ -714,3 +713,4 @@ const Utils = {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { StickerDesigner, LoadingManager, Utils };
 }
+
