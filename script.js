@@ -7,7 +7,7 @@ class StickerDesigner {
         this.currentVehicle = 'car';
         this.stickers = [];
         this.vehicleImages = {
-            car: 'images/vehicle-car.svg',
+            car: 'http://www.w3.org/2000/svg',
             bike: 'images/vehicle-bike.svg',
             truck: 'images/vehicle-truck.svg'
         };
@@ -713,4 +713,5 @@ const Utils = {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { StickerDesigner, LoadingManager, Utils };
 }
+
 
