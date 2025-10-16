@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Sticker Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Sticker Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
 </head>
 <body>
-
-<div class="container">
+  <div class="container">
     <h1>🚗 Vehicle Sticker Designer</h1>
 
     <div class="vehicle-selector">
-        <button class="vehicle-option active" data-vehicle="car">Car</button>
-        <button class="vehicle-option" data-vehicle="bike">Bike</button>
-        <button class="vehicle-option" data-vehicle="truck">Truck</button>
+      <button class="vehicle-option active" data-vehicle="car">Car</button>
+      <button class="vehicle-option" data-vehicle="bike">Bike</button>
+      <button class="vehicle-option" data-vehicle="truck">Truck</button>
     </div>
 
-    <div id="designer">
-        <canvas id="design-canvas"></canvas>
-        <div id="sticker-gallery"></div>
-    </div>
+    <canvas id="design-canvas"></canvas>
 
+    <h2>Stickers</h2>
+    <div id="sticker-gallery"></div>
+
+    <h2>Controls</h2>
     <div class="controls">
-        <input type="file" id="user-file-input" style="display:none;">
-        <button id="browse-user-image">Upload Your Sticker</button>
-        <input type="text" id="text-input" placeholder="Enter text">
-        <input type="color" id="text-color" value="#000000">
-        <select id="font-select">
-            <option value="Arial">Arial</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Times New Roman">Times New Roman</option>
-        </select>
-        <input type="number" id="text-size" value="30" min="10" max="100">
-        <button id="add-text-btn">Add Text</button>
-        <button id="clear-btn">Clear</button>
-        <button id="download-btn">Download</button>
+      <input type="file" id="user-file-input" style="display:none;">
+      <button id="browse-user-image">Upload Your Sticker</button>
+      <input type="text" id="text-input" placeholder="Enter text">
+      <input type="color" id="text-color" value="#000000">
+      <select id="font-select">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+      </select>
+      <input type="number" id="text-size" value="30" min="10" max="100">
+      <button id="add-text-btn">Add Text</button>
+      <button id="clear-btn">Clear</button>
+      <button id="download-btn">Download</button>
     </div>
+  </div>
 
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
