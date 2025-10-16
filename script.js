@@ -382,4 +382,11 @@ class StickerDesigner {
 }
 
 // Initialize app
-document.addEventListener('DOMContentLoaded', () => { window.stickerDesigner = new StickerDesigner(); });
+dropZone.addEventListener('drop', (e) => {
+    const files = e.dataTransfer.files;
+    if (files && files[0]) {
+        this.handleUserImageFile(files[0]);
+    }
+});
+
+
