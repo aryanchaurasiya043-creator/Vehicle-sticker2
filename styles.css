@@ -1,109 +1,63 @@
-:root{
-  --bg1: #667eea;
-  --bg2: #764ba2;
-  --card: rgba(255,255,255,0.08);
-  --accent: #f59e0b;
-  --muted: rgba(255,255,255,0.6);
-  --surface: #f8fafc;
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);
-  color:white;
-  min-height:100vh;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
-.page{max-width:1100px;margin:2rem auto;padding:1rem;}
-
-.hero{
-  text-align:center;
-  padding:2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border-radius:12px;
-  margin-bottom:1.5rem;
+.vehicle-selector button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
-.hero h1{margin:0;font-size:2rem}
-.hero .subtitle{opacity:0.9;margin-top:0.5rem}
-.cta-button{
-  display:inline-block;margin-top:1rem;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;
+.vehicle-option.active {
+    background-color: #f59e0b;
+    color: white;
 }
 
-.container{display:block}
-
-/* sections */
-.section{display:none}
-.section.active{display:block}
-
-/* layout */
-.designer-grid{
-  display:grid;
-  grid-template-columns: 1fr 320px;
-  gap:1rem;
-  align-items:start;
+#design-canvas {
+    border: 2px dashed #f3f4f6;
+    margin-top: 1rem;
 }
 
-/* canvas panel */
-.canvas-panel{background:var(--card);padding:1rem;border-radius:12px}
-.panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
-.panel-title h3{margin:0}
-.panel-actions .btn{margin-left:0.5rem}
-
-/* canvas wrapper */
-.canvas-wrap{
-  background:#fff;
-  padding:12px;
-  border-radius:8px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-  margin-bottom:0.75rem;
-}
-canvas#design-canvas{border-radius:6px; max-width:100%; height:auto;border:1px solid #e6e6e6;}
-
-/* drop zone */
-.drop-zone{
-  border:2px dashed rgba(255,255,255,0.08);
-  padding:12px;
-  border-radius:8px;
-  text-align:center;
-  margin-top:.5rem;
-  color:var(--muted);
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-}
-.drop-zone.dragover{background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.15); color:#fff}
-.link-btn{background:none;border:none;color:var(--accent);cursor:pointer;font-weight:600}
-
-/* tools panel */
-.tools-panel{background:var(--card);padding:1rem;border-radius:12px}
-.sticker-gallery{display:flex;flex-wrap:wrap;gap:.5rem;padding:.25rem;margin-bottom:.5rem}
-.sticker-gallery .sticker-item{width:64px;height:64px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:white;cursor:pointer;border:2px solid rgba(0,0,0,0.06)}
-.sticker-gallery .sticker-item img{max-width:90%;max-height:90%}
-
-/* gallery grid on home */
-.gallery-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:1rem}
-.gallery-card{background:var(--card);padding:.75rem;border-radius:10px;width:220px;text-align:center}
-.gallery-card img{width:100%;height:120px;object-fit:contain;background:#fff;padding:8px;border-radius:8px}
-
-/* buttons & inputs */
-.btn{background:var(--accent);color:#fff;border:none;padding:.5rem .6rem;border-radius:8px;cursor:pointer}
-.btn.muted{background:transparent;border:1px solid rgba(255,255,255,0.06)}
-.row{display:flex;gap:.5rem;margin-top:.5rem}
-input[type="text"], input[type="number"], select, input[type="color"], input{
-  width:100%;padding:.45rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff
+#sticker-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* small */
-.footer{text-align:center;margin-top:1rem;opacity:0.85}
+#sticker-gallery .sticker-item img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #f3f4f6;
+}
 
-/* responsive */
-@media (max-width:920px){
-  .designer-grid{grid-template-columns: 1fr}
-  .tools-panel{order:2}
-  .canvas-panel{order:1}
+.controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.controls input, .controls select, .controls button {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
 }
