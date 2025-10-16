@@ -1,63 +1,72 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .vehicle-selector button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  color: #333;
 }
+
 .vehicle-option.active {
-    background-color: #f59e0b;
-    color: white;
+  background-color: #f59e0b;
+  color: white;
 }
 
 #design-canvas {
-    border: 2px dashed #f3f4f6;
-    margin-top: 1rem;
+  border: 2px dashed #f3f4f6;
+  margin-top: 1rem;
 }
 
 #sticker-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
 }
 
 #sticker-gallery .sticker-item img {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 2px solid #f3f4f6;
+  width: 60px;
+  height: 60px;
+  cursor: grab;
+  border-radius: 8px;
+  border: 2px solid #f3f4f6;
+  transition: transform 0.2s;
+}
+
+#sticker-gallery .sticker-item img:hover {
+  transform: scale(1.2);
 }
 
 .controls {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
+
 .controls input, .controls select, .controls button {
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
 }
