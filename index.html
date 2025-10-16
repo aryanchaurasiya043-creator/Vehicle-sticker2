@@ -175,18 +175,13 @@
                     </div>
                     
                     <div class="tool-section">
-                        <h3>Your Image</h3>
-                        <div id="user-drop-zone" class="drop-zone">
-                            <div class="drop-zone-inner">
-                                <i class="fas fa-images"></i>
-                                <p>Drag & drop your image here</p>
-                                <span>or</span>
-                                <button type="button" id="browse-user-image" class="btn btn-small">Browse</button>
-                                <input type="file" id="user-file-input" accept="image/*" aria-label="Upload your image">
-                                <small>Recommended: PNG/SVG with transparent background</small>
-                            </div>
-                        </div>
-                    </div>
+    <div id="user-drop-zone" class="drop-zone">
+        Drop your image here
+    </div>
+    <input type="file" id="user-file-input" accept="image/*" hidden>
+    <button id="browse-user-image">Browse</button>
+</div>
+
                     
                     <div class="tool-section">
                         <h3>Text</h3>
@@ -276,3 +271,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
